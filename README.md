@@ -17,7 +17,7 @@ Um simples scanner de portas desenvolvido em Python usando a biblioteca Tkinter 
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/SEU_USUÁRIO/port-scanner.git
+   git clone https://github.com/Aurios-Arthur/AllSeeingEye.git
 
 
 ## Como Executar
