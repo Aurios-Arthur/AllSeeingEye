@@ -23,16 +23,18 @@ Um simples scanner de portas desenvolvido em Python usando a biblioteca Tkinter 
 ## Como Executar
 
 1. Navegue até o diretorio que o AllSeeingEye foi instalado 
-
-cd /home/kali/Desktop/AllSeeingEye/
+   ```bash
+    cd /home/kali/Desktop/AllSeeingEye/ 
 
 2. Execute a versção desejada
 
 ### Linux 
-  python3 AllSeeingEye_PTBR.py
+    ```bash
+    python3 AllSeeingEye_PTBR.py
 
 ### Windows
-  python AllSeeingEye_PTBR.py
+ 
+    python AllSeeingEye_PTBR.py
 
 ### Pré-requisitos
 
