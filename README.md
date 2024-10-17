@@ -29,7 +29,7 @@ Um simples scanner de portas desenvolvido em Python usando a biblioteca Tkinter 
 2. Execute a versção desejada
 
 ### Linux 
-    ```bash
+    
     python3 AllSeeingEye_PTBR.py
 
 ### Windows
