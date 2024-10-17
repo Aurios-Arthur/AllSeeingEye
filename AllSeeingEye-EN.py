@@ -3,26 +3,26 @@ import tkinter as tk
 from tkinter import messagebox
 
 def scan_ports(target):
-    result_text.delete(1.0, tk.END)  # Limpa o texto anterior
+    result_text.delete(1.0, tk.END)  
     result_text.insert(tk.END, f"Scanning ports on {target}...\n")
     
-    open_ports = []  # Lista para armazenar portas abertas
+    open_ports = []  
     
-    for port in range(1, 1025):  # Scaneia as portas de 1 a 1024
+    for port in range(1, 1025):  
         scanning_message = f"Scanning port {port}..."
         result_text.insert(tk.END, scanning_message)
-        root.update()  # Atualiza a interface gráfica
+        root.update()  
         
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        sock.settimeout(1)  # Aumenta o tempo limite para 2 segundos
+        sock.settimeout(1)  
         result = sock.connect_ex((target, port))
         
-        result_text.delete(1.0, tk.END)  # Limpa a mensagem de escaneamento
-        result_text.insert(tk.END, f"Scanning ports on {target}...\n")  # Reexibe a mensagem de escaneamento
+        result_text.delete(1.0, tk.END)  
+        result_text.insert(tk.END, f"Scanning ports on {target}...\n")  
         
         if result == 0:
             open_ports.append(port)
-            open_ports_text.insert(tk.END, f"Port {port}: OPEN\n")  # Mostra a porta aberta na nova caixa
+            open_ports_text.insert(tk.END, f"Port {port}: OPEN\n")  
         sock.close()
         
     if open_ports:
@@ -34,7 +34,7 @@ def scan_ports(target):
 def start_scan():
     target_ip = entry.get()
     if target_ip:
-        open_ports_text.delete(1.0, tk.END)  # Limpa as portas abertas antes de cada escaneamento
+        open_ports_text.delete(1.0, tk.END)  
         scan_ports(target_ip)
     else:
         messagebox.showwarning("Input Error", "Please enter a valid IP address.")
